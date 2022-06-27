@@ -1,6 +1,28 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+
+  var twoSum = function(nums, target) {
+    let arry = []
+    for (i in nums) {
+        for (j in nums) {
+            if ((nums[j] + nums[i]) === target) {
+                arry[0] = i
+                arry[1] = j
+            }
+        }
+    }
+    for(m in nums){
+        if (i === nums[m]){
+            arry[0] = m
+        }
+        if (j === nums[m]){
+            arry[1] = m
+        }
+    }
+    return arry
+};
 }
+
 
 /* 
   Write the Big O time complexity of your function here
